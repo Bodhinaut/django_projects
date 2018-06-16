@@ -12,3 +12,10 @@ Currently working on learning Anaconda, using virtual environments within to run
 
 * Django templates interact with your website. Templates and models connect display and creat data dynamically. 
 These template tags have their own syntax, the syntax allows injection of dynmaic content that our Django app views will produce effecting the final HTML.
+
+---
+6-16-2018
+
+_https://docs.djangoproject.com/en/2.0/intro/tutorial01/_
+
+## Writing your first Django app, part 1
