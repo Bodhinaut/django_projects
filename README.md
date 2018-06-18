@@ -33,12 +33,15 @@ this is for BASH users, and GITBASH users
 
 remember, anything we initialize our environment with will have those installions, so pip _library_ or whatever django installation
 _example_
+
 **conda create --name myDjangoEnv python=3.6**
+
 you can deactive with 
 **deactivate myEnv**
 **source deactivate myEnv**
 
 do 
+
 **conda info --envs**
 to see all of your venv
 
