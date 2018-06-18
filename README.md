@@ -7,15 +7,43 @@ Currently working on learning Anaconda, using virtual environments within to run
 
 ---
 
-6-11-2017
-* creating new url file and saving it into django application, the idea is that we can have the application itself host its own url patterns, that we can then call from the urls.py in the first project folder. 
 
-* Django templates interact with your website. Templates and models connect display and creat data dynamically. 
-These template tags have their own syntax, the syntax allows injection of dynmaic content that our Django app views will produce effecting the final HTML.
+### Django
+A free and open source web framework. 
+* It allows us to map a requested URL from a user to the code that is actually meant to handle it. It also allows us to create that requested HTML dynamically. 
+
+* Templates allow us to inject calculated values and information from the _database_ into an HTML page to then show to the user. 
 
 ---
-6-16-2018
 
-_https://docs.djangoproject.com/en/2.0/intro/tutorial01/_
+**Virtual Environments** are important. I use **Anaconda** because it allows us to create a virtual environment very easily. Python packages change and update often and these changes can crash websites and break backwards compatiability. We will test out new features and not break our web app by creating a virtual environment that contains the packages we wish to test out. This also allows us all to be on the same page with the same installed versions of software and in the same environment.
 
-## Writing your first Django app, part 1
+---
+
+Anaconda makes this easy! It has a virtual environment handler. 
+
+**conda create --name myEnv django
+
+You just created a virtual environment (venv) with the latest version of Django. 
+
+**activate myEnv**
+or
+**source activate myEnv**
+this is for BASH users, and GITBASH users
+
+remember, anything we initialize our environment with will have those installions, so pip _library_ or whatever django installation
+_example_
+
+**conda create --name myDjangoEnv python=3.6**
+
+you can deactive with 
+**deactivate myEnv**
+**source deactivate myEnv**
+
+do 
+
+**conda info --envs**
+to see all of your venv
+
+once you are in your venv, don't forget to 
+**conda install django**
