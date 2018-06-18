@@ -16,3 +16,31 @@ A free and open source web framework.
 
 ---
 
+**Virtual Environments** are important. I use **Anaconda** because it allows us to create a virtual environment very easily. Python packages change and update often and these changes can crash websites and break backwards compatiability. We will test out new features and not break our web app by creating a virtual environment that contains the packages we wish to test out. This also allows us all to be on the same page with the same installed versions of software and in the same environment.
+
+---
+
+Anaconda makes this easy! It has a virtual environment handler. 
+
+**conda create --name myEnv django
+
+You just created a virtual environment (venv) with the latest version of Django. 
+
+**activate myEnv**
+or
+**source activate myEnv**
+this is for BASH users, and GITBASH users
+
+remember, anything we initialize our environment with will have those installions, so pip _library_ or whatever django installation
+_example_
+**conda create --name myDjangoEnv python=3.6**
+you can deactive with 
+**deactivate myEnv**
+**source deactivate myEnv**
+
+do 
+**conda info --envs**
+to see all of your venv
+
+once you are in your venv, don't forget to 
+**conda install django**
