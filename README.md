@@ -47,3 +47,19 @@ to see all of your venv
 
 once you are in your venv, don't forget to 
 **conda install django**
+
+---
+
+* django-admin
+
+create first project with django by,
+
+**django-admin startproject first_project**
+
+this also creates the django project folder,
+__init__.py: blank py script, lets Python know this is a directory to be treated as a package
+settings.py: store project settings, add apps, templates, detail file path with python os module...
+urls.py: url patterns ofr project, the different pages of the web app
+wsgi.py: wbeserver gateway interface, helps us to deploy
+manage.py: holds runserver and other important static commands for our web app
+ex... **python manage.py runserver**
