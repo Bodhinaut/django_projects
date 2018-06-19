@@ -47,3 +47,11 @@ to see all of your venv
 
 once you are in your venv, don't forget to 
 **conda install django**
+
+---
+
+* django-admin
+
+create first project with django by,
+
+**django-admin startproject first_project**
