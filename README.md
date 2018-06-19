@@ -55,3 +55,8 @@ once you are in your venv, don't forget to
 create first project with django by,
 
 **django-admin startproject first_project**
+
+this also creates the django project folder,
+__init__.py: blank py script, lets Python know this is a directory to be treated as a package
+settings.py: store project settings, add apps, templates, detail file path with python os module...
+
