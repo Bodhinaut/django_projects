@@ -63,3 +63,7 @@ urls.py: url patterns ofr project, the different pages of the web app
 wsgi.py: wbeserver gateway interface, helps us to deploy
 manage.py: holds runserver and other important static commands for our web app
 ex... **python manage.py runserver**
+
+---
+
+
