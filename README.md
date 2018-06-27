@@ -22,7 +22,7 @@ A free and open source web framework.
 
 Anaconda makes this easy! It has a virtual environment handler. 
 
-**conda create --name myEnv django
+**conda create --name myEnv django**
 
 You just created a virtual environment (venv) with the latest version of Django. 
 
