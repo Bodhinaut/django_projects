@@ -80,3 +80,25 @@ we retrieve that information from a database and use it to generate content for 
 * Settings.py we can edit the engine parameter used for databses 
 
 * Create move, use class structre inside of applitcations in models.py
+
+---
+
+we will inherent from subclass of djangos built in models class
+
+* Then each attribute of class represents a field which is just like a column name with contrains in SQL 
+
+* SQL operates like a giant table, with each column representing a field , and each row representing an entry data point 
+
+* Eeach column has a type of field, such as charField, IntergerField etc..
+
+* Each filed will then have a contraint like max_char or max_length
+
+---
+
+Then there is the table model relationship, 
+
+often models will reference each other 
+
+* for this referencing to work we use **foreign keys and primary keys**
+
+* the unique ID in one table is the foreign key in another, later we iwll focus on one-to-one and many-to-many relationships 
