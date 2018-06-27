@@ -66,4 +66,17 @@ ex... **python manage.py runserver**
 
 ---
 
+* Setting up projects and applicatins involves creating views and mapping URLs
+* simple template tags
+* serve static media files 
 
+---
+
+* With models and databases we accept infor from the user, input it into a database, 
+we retrieve that information from a database and use it to generate content for the user
+
+* SQLite can come in handy here with Django and Python in general, we use models to incorporate a databse into a django project and can switch backends easily
+
+* Settings.py we can edit the engine parameter used for databses 
+
+* Create move, use class structre inside of applitcations in models.py
