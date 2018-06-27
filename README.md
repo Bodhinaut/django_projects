@@ -102,3 +102,22 @@ often models will reference each other
 * for this referencing to work we use **foreign keys and primary keys**
 
 * the unique ID in one table is the foreign key in another, later we iwll focus on one-to-one and many-to-many relationships 
+
+---
+
+_INSERT MODEL EXAMPLES HERE LATER_
+
+---
+
+After everythins is set up we migrate the databases, sjango does the heavy lifting of creating SQL tables taht corresponds to the models we created, 
+
+python manage.py migrate
+
+---
+
+then register changes to your app, 
+
+python manage.py makemigrations _yourapp_
+
+we can then later on use the shell from the manage.py file to play around with the models, 
+Djangos admin has so many useful features 
