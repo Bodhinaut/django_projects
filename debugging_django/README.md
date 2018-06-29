@@ -36,3 +36,7 @@ your database,
 **manage.py grah_modes auth blog | dot -Tpng -o test.png**
 
 
+manag.py runscript update.py - gives all context and models around your django app for updates
+
+manage.py shell_plus - launch and load models into django shell 
+
