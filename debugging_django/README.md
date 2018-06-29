@@ -40,3 +40,11 @@ manag.py runscript update.py - gives all context and models around your django a
 
 manage.py shell_plus - launch and load models into django shell 
 
+---
+
+In general good practice of debugging and straightforward way is to simple use the Python debugger. Add the following line to a Django view function. 
+
+**import pdb; pdb.set_trace()**
+
+Attempt  to then load page in browser, it will hang and we will get a prompt to carry on debugging on the actual executing code. 
+
