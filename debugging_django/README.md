@@ -15,9 +15,24 @@ Following is an example and solution at debugging.
 
 ---
 
+https://github.com/django-extensions/django-extensions
+
 utilize manage.py show_urls
 
-install django_extensions
+install django_extensions - third party app, provides management commands, started with providing management commands that aren't in core
 
 This will help give us in what order the url resolution has been attempted. 
+
+install django extensions in settings.py file 
+
+manage.py dumpscript, to output in python a script that will allow you to repopulate your database as python objects, still need django
+but good way to keep your info in portable format that supports django backend 
+
+next is to use manag.py export_emails, export your users emails to be able to use that data, 
+
+manage.py graph_models , outputs dot file with grahic visuals, shows beautiful and pretty database with connections, representation of 
+your database, 
+
+**manage.py grah_modes auth blog | dot -Tpng -o test.png**
+
 
