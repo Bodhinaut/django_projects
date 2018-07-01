@@ -121,3 +121,22 @@ python manage.py makemigrations _yourapp_
 
 we can then later on use the shell from the manage.py file to play around with the models, 
 Djangos admin has so many useful features 
+
+---
+
+We just:
+Set up projects and applications
+Created views and mapped URLs
+Used simple Templates and tags
+Served static media files 
+
+For our web app, start with django 2 part one, 
+
+---
+
+Now we will: 
+Models Databases and Admin
+Models Overview 
+Important, accept info from user, input into database, retreive info from database, generate content 
+for the user, 
+
