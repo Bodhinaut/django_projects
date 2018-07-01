@@ -169,5 +169,46 @@ Often models will reference each other
 
 For this referencing to work we use the concepts of Foreign Keys and Primary Keys.
 
+A primary key is a unique identifier for each row in a table
+
+A foreign key just denotes that the column coincides with a primary key of another table
+
+
+class Topic(models.Model):
+	top_name = models.CharField(max_length=264, unique=True)
+
+class Webpage(models.Model):
+	category = models.ForeignKey(Topic)
+name = models.CharField(max_length=264)
+	url = models.URLField()
+
+class Webpage(models.Model):
+	topic = models.ForeignKey(Topic)
+name = models.CharField(max_length=264)
+	url = models.URLField()
+
+	def __str__(self):
+		return self.name
+    
+    
+After we’ve set up the models we can migrate the database
+This basically let’s Django do the heavy lifting of creating SQL databases that correspond to the models we created
+
+Django can do this entire process with a simple command:
+python manage.py migrate 
+Then register the changes to your app, shown here with some generic “app1”:
+python manage.py makemigrations app1 
+ 
+
+ Then migrate the database one more time:
+python manage.py migrate 
+We can then later on use the shell from the manage.py file to play around with the models
+
+ 
+
+ 
+
+
+
 
 
