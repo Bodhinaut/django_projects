@@ -145,3 +145,13 @@ for the user,
 An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
 
 An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
+
+In the settings.py file you can edit the ENGINE parameter used for DATABASES
+To create an actual model, we use a class structure inside of the relevant applications models.py file
+
+In the settings.py file you can edit the ENGINE parameter used for DATABASES
+To create an actual model, we use a class structure inside of the relevant applications models.py file
+
+This will all feel very natural if you have some SQL experience, but in case you don’t let’s quickly review what a SQL database is like!
+
+
