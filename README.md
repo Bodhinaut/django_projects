@@ -142,36 +142,36 @@ for the user,
 
 ---
 
-An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
+* An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
 
-An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
+* An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
 
-In the settings.py file you can edit the ENGINE parameter used for DATABASES
+* In the settings.py file you can edit the ENGINE parameter used for DATABASES
 To create an actual model, we use a class structure inside of the relevant applications models.py file
 
-In the settings.py file you can edit the ENGINE parameter used for DATABASES
+* In the settings.py file you can edit the ENGINE parameter used for DATABASES
 To create an actual model, we use a class structure inside of the relevant applications models.py file
 
-This will all feel very natural if you have some SQL experience, but in case you don’t let’s quickly review what a SQL database is like!
+* This will all feel very natural if you have some SQL experience, but in case you don’t let’s quickly review what a SQL database is like!
 
 
-SQL operates like a giant table, with each column representing a field, and each row representing an entry.
+* SQL operates like a giant table, with each column representing a field, and each row representing an entry.
 
 
-Each column has a type of field, such as a CharField, IntegerField, DateField, etc.
+* Each column has a type of field, such as a CharField, IntegerField, DateField, etc.
 Each field can also have constraints
 
 
-For example, a CharField should have a max_length constraint, indicating the maximum number of characters allowed
+* For example, a CharField should have a max_length constraint, indicating the maximum number of characters allowed
 
-The last thing to note is table (or models) relationships.
+* The last thing to note is table (or models) relationships.
 Often models will reference each other
 
-For this referencing to work we use the concepts of Foreign Keys and Primary Keys.
+* For this referencing to work we use the concepts of Foreign Keys and Primary Keys.
 
-A primary key is a unique identifier for each row in a table
+* A primary key is a unique identifier for each row in a table
 
-A foreign key just denotes that the column coincides with a primary key of another table
+* A foreign key just denotes that the column coincides with a primary key of another table
 
 
 class Topic(models.Model):
@@ -191,16 +191,16 @@ name = models.CharField(max_length=264)
 		return self.name
     
     
-After we’ve set up the models we can migrate the database
+* After we’ve set up the models we can migrate the database
 This basically let’s Django do the heavy lifting of creating SQL databases that correspond to the models we created
 
-Django can do this entire process with a simple command:
+* Django can do this entire process with a simple command:
 python manage.py migrate 
 Then register the changes to your app, shown here with some generic “app1”:
 python manage.py makemigrations app1 
  
 
- Then migrate the database one more time:
+* Then migrate the database one more time:
 python manage.py migrate 
 We can then later on use the shell from the manage.py file to play around with the models
 
