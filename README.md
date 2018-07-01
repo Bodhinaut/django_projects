@@ -140,3 +140,8 @@ Models Overview
 Important, accept info from user, input into database, retreive info from database, generate content 
 for the user, 
 
+---
+
+An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
+
+An essential part of any website is the ability to accept information from a user and input it into a database and retrieve information from a database and use it to generate content for the user.
