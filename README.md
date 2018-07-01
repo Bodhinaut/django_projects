@@ -152,9 +152,6 @@ To create an actual model, we use a class structure inside of the relevant appli
 * In the settings.py file you can edit the ENGINE parameter used for DATABASES
 To create an actual model, we use a class structure inside of the relevant applications models.py file
 
-* This will all feel very natural if you have some SQL experience, but in case you don’t let’s quickly review what a SQL database is like!
-
-
 * SQL operates like a giant table, with each column representing a field, and each row representing an entry.
 
 
