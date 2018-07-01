@@ -155,3 +155,19 @@ To create an actual model, we use a class structure inside of the relevant appli
 This will all feel very natural if you have some SQL experience, but in case you don’t let’s quickly review what a SQL database is like!
 
 
+SQL operates like a giant table, with each column representing a field, and each row representing an entry.
+
+
+Each column has a type of field, such as a CharField, IntegerField, DateField, etc.
+Each field can also have constraints
+
+
+For example, a CharField should have a max_length constraint, indicating the maximum number of characters allowed
+
+The last thing to note is table (or models) relationships.
+Often models will reference each other
+
+For this referencing to work we use the concepts of Foreign Keys and Primary Keys.
+
+
+
