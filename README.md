@@ -264,7 +264,7 @@ It works by using a “hidden input” which is a random code and checking that 
 
 ---
 
-Model Forms
+**Model Forms**
 
 We’ve seen how we can use Django Forms to grab information from the user and then do something with it.
 So far we’ve only printed out that information, but what if we wanted to save it to a model?
