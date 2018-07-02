@@ -202,6 +202,9 @@ python manage.py migrate
 We can then later on use the shell from the manage.py file to play around with the models
 
  
+---
+
+
 
  
 
