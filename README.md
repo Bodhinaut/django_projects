@@ -266,10 +266,45 @@ It works by using a “hidden input” which is a random code and checking that 
 
 Model Forms
 
+We’ve seen how we can use Django Forms to grab information from the user and then do something with it.
+So far we’ve only printed out that information, but what if we wanted to save it to a model?
+
+Luckily Django makes accepting form input and passing it to a model very simple!
+Instead of inheriting from the forms.Forms class, we will use forms.ModelForm in our forms.py file.
+
+This helper class allows us to create a form from a pre-existing model
+We then add an inline class (something we haven’t seen before) called Meta
+This Meta class provides information connecting the model to the form.
+
+Example:
+from django import forms
+from myapp.models import MyModel
+class MyNewForm(forms.ModelForm):
+	# Form Fields go here
+		class Meta:
+			model = MyModel
+        fields = # Let’s see the options!
 
 
 
+The fields attribute will connect to model
+from django import forms
+from myapp.models import MyModel
+class MyNewForm(forms.ModelForm):
+	# Form Fields go here
+		class Meta:
+			model = MyModel
+        fields = # Let’s see the options!
 
+---
+
+Create a ModelForm in forms.py
+Connect the form in the template
+Edit views.py to show the form
+Figure out how to .save() the data
+Verify the model is admin registered
+
+---
 
 
 
