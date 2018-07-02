@@ -229,6 +229,30 @@ from forms import FormName
 
 
  
+We can then create a new view for the form
+def form_name_view(request):
+	form = forms.FormName()
+	return render(request,’form_name.html’,
+							{‘form’:form})
+
+
+Then we just add the view to the app’s urls, either directly or with include(). Directly:
+from basicapp import views
+urlpatterns = [
+url(r’formpage/’,views.form_name_view,
+    name = ‘form_name’),
+]
+
+
+We can then create the templates folder along with the html file that will hold the template tagging for the form.
+Remember to update the settings.py file to reflect the TEMPLATE_DIR variable!
+Also remember that your views should reflect subdirectories inside templates!
+
+So now everything is setup for us to go into the form_name.html file inside templates/basicapp and add in the actual template tagging that will create the Django Form!
+
+
+There are several ways you can “inject” the form using template tagging. You can just pass in the key from the context dictionary:
+{{ form }}
 
 
 
