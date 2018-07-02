@@ -262,6 +262,10 @@ The Django framework requires the CSRF token to be present.
 If it is not there, your form may not work!
 It works by using a “hidden input” which is a random code and checking that it matches the user’s local site page.
 
+---
+
+Model Forms
+
 
 
 
