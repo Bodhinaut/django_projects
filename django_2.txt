@@ -1,0 +1,67 @@
+We just:
+Set up projects and applications
+Created views and mapped URLs
+Used simple Templates and tags
+Served static media files 
+
+relative urls coding example has good follow along 
+
+For our web app, start with django 2 part one, 
+---
+
+Now we will: 
+Models Databases and Admin
+Models Overview 
+Important, accept info from user, input into database, retreive info from database, generate content 
+for the user, 
+
+time to populate dummy data from the faker website to test out stuff, 
+
+django forms allow us to generate HTML form widgets, process data in python data strucute,
+
+create form verisons of models and update models, 
+
+steps to create form on our website.... 
+
+create forms.py file inside our application, 
+
+then cll djanos build in forms classes,
+
+from django import forms 
+
+forms feel and look like creating model, 
+
+insideour views.py need to import forms, 
+
+add view to the apps urls, 
+
+update settins to felfect template_dir variable, 
+
+views shuld reflect subdirectories inside templates, 
+
+CSRF TOKEN protects user from malicious attacks, django framework requries the token ,
+
+
+----
+
+protwo project folder from django level two, 
+create coming soon page?? 
+
+we had the user.html file display the users, we dont want that...
+
+in protwo change to sign up pge,
+connect to a modelform, user will sign up on the user page and be take 
+back to the home page, 
+
+create a modelform in forms.py
+connect the form in the template
+edit the views.py to show the form
+figure out how to save the data
+verify the modek is admin registered 
+
+
+
+
+
+
+

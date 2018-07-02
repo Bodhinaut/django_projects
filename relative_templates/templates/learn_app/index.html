@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends "learn_app/base.html" %}
+	{% block body_block %}
+ 	<h1>WELCOME TO INDEX</h1>
+ 	<h2>This be index.html page showing</h2>
+ 	<h1>{{ text|cut:'world' }}</h1>
+ 	<h1>{{ number|add:"99" }}</h1>
+ 	{% endblock %}
