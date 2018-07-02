@@ -255,6 +255,17 @@ There are several ways you can “inject” the form using template tagging. You
 {{ form }}
 
 
+This is the first time we’ve encountered thinking about site security measures!
+This is a Cross-Site Request Forgery (CSRF) token, which secures the HTTP POST action that is initiated on the subsequent submission of a form. 
+
+The Django framework requires the CSRF token to be present. 
+If it is not there, your form may not work!
+It works by using a “hidden input” which is a random code and checking that it matches the user’s local site page.
+
+
+
+
+
 
 
 
