@@ -205,6 +205,28 @@ We can then later on use the shell from the manage.py file to play around with t
 ---
 
 
+how to use Django Forms to accept User Input and connect it to the database and retrieve it later on.
+
+Django Forms Advantages:
+Quickly generate HTML form widgets
+Validate data and process it into a Python data structure
+Create form versions of our Models, quickly update models from Forms
+
+The first thing we need to do is create a forms.py file inside the application! 
+After that we call Django’s built in forms classes (looks very similar to creating models).
+
+Example inside of forms.py:
+from django import forms
+class FormName(forms.Form):
+	name = forms.CharField()
+	email = forms.EmailField()
+	text = forms.CharField(widget=forms.Textarea)
+
+
+Inside our views.py file we need to import the forms (two ways to do this)
+from . import forms
+from forms import FormName
+
 
  
 
