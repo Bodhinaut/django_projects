@@ -399,3 +399,50 @@ a link to the home page, we’ll use this name instead of writing out a URL.
 ------------------
 
 
+
+Writing a View
+A view function takes in information from a request, prepares the data
+needed to generate a page, and then sends the data back to the browser,
+often by using a template that defines what the page will look like.
+The file views.py in learning_logs was generated automatically when
+we ran the command python manage.py startapp. Here’s what’s in views.py
+right now:
+views.py from django.shortcuts import render
+# Create your views here.
+Getting Started with Django 415
+Currently, this file just imports the render() function, which renders the
+response based on the data provided by views. The following code is how
+the view for the home page should be written:
+
+----------
+
+Writing a View
+A view function takes in information from a request, prepares the data
+needed to generate a page, and then sends the data back to the browser,
+often by using a template that defines what the page will look like.
+The file views.py in learning_logs was generated automatically when
+we ran the command python manage.py startapp. Here’s what’s in views.py
+right now:
+views.py from django.shortcuts import render
+# Create your views here.
+Getting Started with Django 415
+Currently, this file just imports the render() function, which renders the
+response based on the data provided by views. The following code is how
+the view for the home page should be written:
+from django.shortcuts import render
+def index(request):
+ """The home page for Learning Log"""
+ return render(request, 'learning_logs/index.html')
+When a URL request matches the pattern we just defined, Django will
+look for a function called index() in the views.py file. Django then passes the
+request object to this view function. In this case, we don’t need to process
+any data for the page, so the only code in the function is a call to render().
+The render() function here uses two arguments—the original request object
+and a template it can use to build the page. Let’s write this template. 
+
+-----------
+
+First define URL pattern, then write views, then write templates. First, define patterns, 
+a URL pattern describes the way the URL is laid out and tells Django what to look for
+when matcing a browser request with a site URL. Each URL then maps to a view, 
+the view function retrieves and processes the data needed for that page, it calls the temp
