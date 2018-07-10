@@ -306,5 +306,96 @@ Verify the model is admin registered
 
 ---
 
+Whenever we want to modify the data that Learning Log manages,
+we’ll follow these three steps: modify models.py, call makemigrations on
+learning_logs, and tell Django to migrate the project.
+
+---------------
+
+Defining the Entry Model
+To record what we’ve been learning about chess and rock climbing, we need
+to define a model for the kinds of entries users can make in their learning
+logs. Each entry needs to be associated with a particular topic. This relationship
+is called a many-to-one relationship, meaning many entries can be
+associated with one topic
+
+---------------
+
+The Django Shell
+Now that we’ve entered some data, we can examine that data programmatically
+through an interactive terminal session. This interactive environment is
+called the Django shell, and it’s a great environment for testing and troubleshooting
+your project. Here’s an example of an interactive shell session:
+(ll_env)learning_log$ python manage.py shell
+u >>> from learning_logs.models import Topic
+>>> Topic.objects.all()
+[<Topic: Chess>, <Topic: Rock Climbing>]
+The command python manage.py shell (run in an active virtual environment)
+launches a Python interpreter that you can use to explore the data
+stored in your project’s database. Here we import the model Topic from the
+learning_logs.models module u. We then use the method Topic.objects.all()
+to get all of the instances of the model Topic; the list that’s returned is called
+a queryset.
+
+-------------
+
+
+To get data through a foreign key relationship, you use the lowercase
+name of the related model followed by an underscore and the word set u.
+For example, say you have the models Pizza and Topping, and Topping is
+related to Pizza through a foreign key. If your object is called my_pizza,
+representing a single pizza, you can get all of the pizza’s toppings using
+the code my_pizza.topping_set.all().
+
+================================
+
+Making Pages: The Learning Log Home Page
+Usually, making web pages with Django consists of three stages: defining
+URLs, writing views, and writing templates. First, you must define patterns
+for URLs. A URL pattern describes the way the URL is laid out and tells
+Django what to look for when matching a browser request with a site URL
+so it knows which page to return.
+Each URL then maps to a particular view—the view function retrieves
+and processes the data needed for that page. The view function often calls a
+template, which builds a page that a browser can read. To see how this works,
+let’s make the home page for Learning Log. We’ll define the URL for the
+home page, write its view function, and create a simple template.
+Because all we’re doing is making sure Learning Log works as it’s supposed
+to, we’ll keep the page simple for now. A functioning web app is fun
+to style when it’s complete; an app that looks good but doesn’t work well
+is pointless. For now, the home page will display only a title and a brief
+description.
+
+---------------------
+
+To make it clear which urls.py we’re working in, we add a docstring
+at the beginning of the file u. We then import the url function, which is
+needed when mapping URLs to views v. We also import the views module
+w; the dot tells Python to import views from the same directory as the
+current urls.py module. The variable urlpatterns in this module is a list of
+individual pages that can be requested from the learning_logs app x.
+The actual URL pattern is a call to the url() function, which takes
+three arguments y. The first is a regular expression. Django will look for
+a regular expression in urlpatterns that matches the requested URL string.
+Therefore, a regular expression will define the pattern that Django can
+look for.
+Let’s look at the regular expression r'^$'. The r tells Python to interpret
+the following string as a raw string, and the quotes tell Python where
+the regular expression begins and ends. The caret (^) tells Python to
+find the beginning of the string, and the dollar sign tells Python to look
+for the end of the string. In its entirety, this expression tells Python to
+look for a URL with nothing between the beginning and end of the URL.
+Python ignores the base URL for the project (http://localhost:8000/), so an
+empty regular expression matches the base URL. Any other URL will not
+match this expression, and Django will return an error page if the URL
+requested doesn’t match any existing URL patterns.
+The second argument in url() at y specifies which view function
+to call. When a requested URL matches the regular expression, Django
+will call views.index (we’ll write this view function in the next section).
+The third argument provides the name index for this URL pattern so we
+can refer to it in other sections of the code. Whenever we want to provide
+a link to the home page, we’ll use this name instead of writing out a URL.
+
+------------------
 
 
